@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -19,8 +20,7 @@
       <section class="heading">
         <header class="hero">
           <img
-            src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
-            alt="freecodecamp logo"
+            
             loading="lazy"
             class="hero-img"
           />
@@ -32,34 +32,31 @@
         </header>
         <div class="author">
           <p class="author-name">
-            By
-            <a href="https://freecodecamp.org" target="_blank" rel="noreferrer"
-              >freeCodeCamp</a
-            >
+            By Pranjal
           </p>
-          <p class="publish-date">March 7, 2019</p>
+          <p class="publish-date">August 13, 2023</p>
         </div>
         <div class="social-icons">
-          <a href="https://www.facebook.com/freecodecamp/">
+          <a href="https://www.facebook.com/">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://twitter.com/freecodecamp/">
+          <a href="https://twitter.com">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="https://instagram.com/freecodecamp">
+          <a href="https://instagram.com/">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/school/free-code-camp/">
+          <a href="https://www.linkedin.com/school/">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://www.youtube.com/freecodecamp">
+          <a href="https://www.youtube.com/">
             <i class="fab fa-youtube"></i>
           </a>
         </div>
       </section>
       <section class="text">
         <p class="first-paragraph">
-          Soon the freeCodeCamp curriculum will be 100% project-driven learning. Instead of a series of coding challenges, you'll learn through building projects - step by step. Before we get into the details, let me emphasize: we are not changing the certifications. All 6 certifications will still have the same 5 required projects. We are only changing the optional coding challenges.
+          Soon the curriculum will be 100% project-driven learning. Instead of a series of coding challenges, you'll learn through building projects - step by step. Before we get into the details, let me emphasize: we are not changing the certifications. All 6 certifications will still have the same 5 required projects. We are only changing the optional coding challenges.
         </p>
         <p>
           After years - years - of pondering these two problems and how to solve them, I slipped, hit my head on the sink, and when I came to I had a revelation! A vision! A picture in my head! A picture of this! This is what makes time travel possible: the flux capacitor!
@@ -83,7 +80,7 @@
           The main design challenge is taking what is currently paragraphs of explanation and instructions and packing them into a single test description text. Each project will involve dozens of tests like this. People will be coding the entire time, rather than switching back and forth from "reading mode" to "coding mode".
         </p>
         <p>
-          Instead of a series of coding challenges, people will be in their code editor passing one test after another, quickly building up a project. People will get into a real flow state, similar to what they experience when they build the required projects at the end of each certification. They'll get that sense of forward progress right from the beginning. And freeCodeCamp will be a much smoother experience.
+          Instead of a series of coding challenges, people will be in their code editor passing one test after another, quickly building up a project. People will get into a real flow state, similar to what they experience when they build the required projects at the end of each certification. They'll get that sense of forward progress right from the beginning. And will be a much smoother experience.
         </p>
       </section>
       <section class="text text-with-images">
@@ -94,7 +91,7 @@
             <li>
               <h4 class="list-subtitle">V1 - 2014</h4>
               <p>
-                We launched freeCodeCamp with a simple list of 15 resources,
+                We launched it with a simple list of 15 resources,
                 including Harvard's CS50 and Stanford's Database Class.
               </p>
             </li>
@@ -152,7 +149,7 @@
           <blockquote class="image-quote">
             <hr />
             <p class="quote">
-              The millions of people who are learning to code through freeCodeCamp
+              The millions of people who are learning to code through
               will have an even better resource to help them learn these
               fundamentals.
             </p>
@@ -170,4 +167,23 @@
       </section>
     </main>
   </body>
+  <script>
+    window.addEventListener('load', () => {
+      registerSW();
+    });
+ 
+    // Register the Service Worker
+    async function registerSW() {
+      if ('serviceWorker' in navigator) {
+        try {
+          await navigator
+                .serviceWorker
+                .register('serviceworker.js');
+        }
+        catch (e) {
+          console.log('SW registration failed');
+        }
+      }
+    }
+ </script>
 </html>
