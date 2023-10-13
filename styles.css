@@ -196,6 +196,8 @@ hr {
   background-color: var(--main-accent);
   padding-top: 25px;
   padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
 }
 .subscription-icon i{
   margin-right: 15px;
